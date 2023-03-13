@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Блог");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	".default", 
+	"news", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -22,7 +22,7 @@ $APPLICATION->SetTitle("Блог");
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
 		"DETAIL_FIELD_CODE" => array(
-			0 => "",
+			0 => "SHOW_COUNTER",
 			1 => "",
 		),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
@@ -45,7 +45,7 @@ $APPLICATION->SetTitle("Блог");
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
+			0 => "SHOW_COUNTER",
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
@@ -82,7 +82,7 @@ $APPLICATION->SetTitle("Блог");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "news",
 		"SEF_FOLDER" => "/blog/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
