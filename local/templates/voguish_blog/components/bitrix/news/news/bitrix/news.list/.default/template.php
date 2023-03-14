@@ -31,7 +31,7 @@ $this->setFrameMode(true);
                 </div>
                 <div class="artical-links">
                     <ul>
-                        <li><small> </small><span><?=$arItem['ACTIVE_FROM']?></span></li>
+                        <li><small> </small><span><?=$arItem['DISPLAY_ACTIVE_FROM']?></span></li>
                         <li><a href="#"><small class="admin"> </small><span><?=$arItem['PROPERTIES']['AUTHOR']['VALUE']?></span></a></li>
                         <li><a href="#"><small class="no"> </small><span>No comments</span></a></li>
                         <li><a href="#"><small class="posts"> </small><span>View posts: <?=$arItem['SHOW_COUNTER']?></span></a></li>
