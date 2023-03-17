@@ -2,12 +2,14 @@
 
 </div>
 <div class="col-md-3 bann-left">
-    <div class="b-search">
-        <form>
-            <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-            <input type="submit" value="">
-        </form>
-    </div>
+
+    <?$APPLICATION->IncludeComponent("bitrix:search.form", "search", Array(
+	"PAGE" => "#SITE_DIR#search/index.php",	// Страница выдачи результатов поиска (доступен макрос #SITE_DIR#)
+		"USE_SUGGEST" => "N",	// Показывать подсказку с поисковыми фразами
+	),
+	false
+);?>
+
     <h3>Recent Posts</h3>
 
     <?$APPLICATION->IncludeComponent(
@@ -111,14 +113,6 @@
 	),
 	false
 );?>
-<!--    <div class="blo-top">-->
-<!--        <li><a href="#">||   Lorem Ipsum passage</a></li>-->
-<!--        <li><a href="#">||   Finibus Bonorum et</a></li>-->
-<!--        <li><a href="#">||   Treatise on the theory</a></li>-->
-<!--        <li><a href="#">||   Characteristic words</a></li>-->
-<!--        <li><a href="#">||   combined with a handful</a></li>-->
-<!--        <li><a href="#">||   which looks reasonable</a></li>-->
-<!--    </div>-->
     <h3>Newsletter</h3>
 
     <div class="blo-top">

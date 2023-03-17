@@ -2,12 +2,12 @@
 
 </div>
 <div class="blog-content-right">
-    <div class="b-search">
-        <form>
-            <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-            <input type="submit" value="">
-        </form>
-    </div>
+    <?$APPLICATION->IncludeComponent("bitrix:search.form", "search", Array(
+        "PAGE" => "#SITE_DIR#search/index.php",	// Страница выдачи результатов поиска (доступен макрос #SITE_DIR#)
+        "USE_SUGGEST" => "N",	// Показывать подсказку с поисковыми фразами
+    ),
+        false
+    );?>
     <!--start-twitter-weight-->
     <div class="twitter-weights">
         <h3>Tweet Widget</h3>
