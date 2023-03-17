@@ -1713,6 +1713,7 @@ div.register-bottom-grid {
 .nam-matis h3 {
   font-size: 1.3em;
 }
+
 .blo-top li a {
   font-size: 1em;
   padding: 1em 0;
@@ -2415,4 +2416,8 @@ ul.pagination {
 a.b-home {
 	font-size: 0.8125em;
 }
+}
+
+.blo-top ul {
+	padding: 0;
 }
