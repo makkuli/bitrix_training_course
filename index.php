@@ -1,16 +1,15 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetPageProperty("tags", "Voguish - сайт моды");
+$APPLICATION->SetPageProperty("tags", "Voguish");
 $APPLICATION->SetPageProperty("keywords_inner", "Voguish - сайт моды");
 $APPLICATION->SetPageProperty("title", "Voguish - сайт моды");
 $APPLICATION->SetPageProperty("keywords", "Voguish - сайт моды");
 $APPLICATION->SetPageProperty("description", "Voguish - сайт моды");
 $APPLICATION->SetTitle("Voguish - сайт моды");
-?>
-<? $APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"top_slider", 
-	array(
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"top_slider",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -23,6 +22,7 @@ $APPLICATION->SetTitle("Voguish - сайт моды");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "top_slider",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_DATE" => "Y",
@@ -30,10 +30,7 @@ $APPLICATION->SetTitle("Voguish - сайт моды");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "DETAIL_PICTURE",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"DETAIL_PICTURE",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "4",
@@ -52,10 +49,7 @@ $APPLICATION->SetTitle("Voguish - сайт моды");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -67,13 +61,9 @@ $APPLICATION->SetTitle("Voguish - сайт моды");
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "top_slider"
-	),
-	false
-); ?>
-
-
+		"STRICT_SECTION_CHECK" => "N"
+	)
+);?>
     <!-- nam-matis -->
 <?php /*
 <?php
@@ -107,6 +97,4 @@ var_dump($res);
             <? $i++; endwhile; ?>
     </div>
 <? endif; ?>
-*/?>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+*/?><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
